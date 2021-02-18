@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: url('app/assets/images/Cocktails.jpg');">
+
+  <div class="container">
+    <h1>Booze overview 🍸</h1>
+
+
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+      <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <% end %></li>
+    </ul>
+
+
+    <div>
+      <%= link_to "Add more of that booze" , new_cocktail_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
