@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>What does the booze need to be a success? 🧪</h1>
+  <h1>What does the booze <strong><%= @cocktail.name %></strong> need to be a success? 🧪</h1>
 
 <%= simple_form_for [ @cocktail, @dose ] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.submit "Add that fäncy cocktail to the collection 👅"%>
+  <%= f.submit "ADD THE MAGIC", class: "btn btn-flat"%>
 <% end %>
 </div>

@@ -3,9 +3,9 @@
 
   <ul>
      <% @cocktail.doses.each do |dose| %>
-    <li class="list-item"><%= dose.description %>
-      <%=dose.ingredient.name %>
-      <%= link_to "Remove ingredient",
+    <li class="list-item"><%= dose.description %>,
+      <%=dose.ingredient.name.capitalize %>
+      <%= link_to "🗑️",
                   dose_path(dose),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
@@ -13,6 +13,6 @@
     <% end %>
   </ul>
 
- <%= link_to "Add ingredients & Dose" , new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<%= link_to "Back to Booze Overview", cocktails_path, class: "btn btn-primary" %>
+ <%= link_to "ADD INGREDIENT" , new_cocktail_dose_path(@cocktail), class: "btn btn-flat" %>
+<%= link_to "BACK TO BOOZE OVERVIEW", cocktails_path, class: "btn btn-flat" %>
 </div>

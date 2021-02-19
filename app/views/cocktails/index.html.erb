@@ -1,18 +1,20 @@
-<div class="banner" style="background-image: url('app/assets/images/Cocktails.jpg');">
-
+<div class="banner">
   <div class="container">
-    <h1>Booze overview 🍸</h1>
-
-
-    <ul>
-      <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
-      <% end %></li>
-    </ul>
-
-
-    <div>
-      <%= link_to "Add more of that booze" , new_cocktail_path, class: "btn btn-primary" %>
-    </div>
+    <h1 class="text-center">Booze overview 🍸</h1>
   </div>
 </div>
+
+  <div class="container">
+    <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+      <% end %>
+  </div>
+
+
+    <div class="container">
+      <%= link_to "ADD THAT MASTERPIECE" , new_cocktail_path, class: "btn btn-flat" %>
+    </div>
+  </div>
