@@ -1,14 +1,17 @@
-<head>
-  <div class="banner">
-    <h1 class="text-left"><%= @cocktail.name %></h1>
-  </div>
-</head>
 
-  <body>
+  <div class="banner">
     <div class="container">
+      <h1 class="text-left"><%= @cocktail.name %></h1>
+      <%= link_to "BOOZE OVERVIEW", cocktails_path, class: "btn btn-flat" %>
+    </div>
+  </div>
+
+
+    <div class="container">
+      <h2>What you gotta add to make it purrfect?</h2>
       <ul>
         <% @cocktail.doses.each do |dose| %>
-        <li class="list-item"><%= dose.description %>
+        <li class="list-item list-margin"><%= dose.description %>
           <%=dose.ingredient.name.capitalize %>
           <%= link_to "🗑️",
                       dose_path(dose),
@@ -19,7 +22,7 @@
       </ul>
       <div class="container">
         <%= link_to "ADD INGREDIENT" , new_cocktail_dose_path(@cocktail), class: "btn btn-flat" %>
-        <%= link_to "BOOZE OVERVIEW", cocktails_path, class: "btn btn-flat" %>
+
+
       </div>
     </div>
-  </body>
