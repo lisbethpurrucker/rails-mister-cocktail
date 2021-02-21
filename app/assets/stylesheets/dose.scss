@@ -2,11 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  background-image: asset-url('Cocktails.png');
+  background-size: contain;
+  background-position: center center;
+  padding: 100px 190px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 120px;
+  margin-bottom: 20px;
 }
 
-.h1 {
-
+.banner h1 {
+margin: auto;
+color: white;
+text-shadow: rgb(255, 114, 13) 2px 2px 2px;
+font-size: 40px;
+font-weight: bold;
+font-family: "Bebas Neue";
+margin-bottom: 10px;
 }

@@ -1,11 +1,14 @@
-
+<div class="banner">
   <div class="container">
-    <h1>Build your favorite booze here 🍹</h1>
-
-
+    <h1>Build your favorite booze 🍹</h1>
+    <h2><%= link_to "Booze Overview", cocktails_path, class: "btn btn-flat" %></h2>
+  </div>
+</div>
+<body>
+  <div class="container">
  <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "ADD THAT FÄNCY COCKTAIL 👅", class: "btn btn-flat"%>
+  <%= f.input :name, class: "form-font" %>
+  <%= f.submit "ADD THAT FÄNCY DRINK 👅", class: "btn btn-flat"%>
 <% end %>
 </div>
-
+</body>
