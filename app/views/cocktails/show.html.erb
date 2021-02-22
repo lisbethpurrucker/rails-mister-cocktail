@@ -1,12 +1,14 @@
 
   <div class="banner">
     <div class="container">
-      <h1 class="text-left"><%= @cocktail.name %></h1>
+      <h1 class="text-left"></h1>
       <%= link_to "BOOZE OVERVIEW", cocktails_path, class: "btn btn-flat" %>
     </div>
   </div>
 
-
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, crop: :fill %>')">
+      <h1> <%= @cocktail.name %> </h1>
+    </div>
     <div class="container">
       <h2>What you gotta add to make it purrfect?</h2>
       <ul>

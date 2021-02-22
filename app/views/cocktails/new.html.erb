@@ -8,6 +8,7 @@
   <div class="container">
  <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name, class: "form-font" %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "ADD THAT FÄNCY DRINK 👅", class: "btn btn-flat"%>
 <% end %>
 </div>
